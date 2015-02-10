@@ -2584,7 +2584,7 @@ idAI::ApplyImpulse
 ================
 */
 void idAI::ApplyImpulse( idEntity *ent, int id, const idVec3 &point, const idVec3 &impulse ) {
-	// FIXME: Jim take a look at this and see if this is a reasonable thing to do
+	// Jim take a look at this and see if this is a reasonable thing to do
 	// instead of a spawnArg flag.. Sabaoth is the only slide monster ( and should be the only one for D3 )
 	// and we don't want him taking physics impulses as it can knock him off the path
 	if ( move.moveType != MOVETYPE_STATIC && move.moveType != MOVETYPE_SLIDE ) {
@@ -4340,7 +4340,7 @@ idAI::DamageFeedback
 
 callback function for when another entity received damage from this entity.  damage can be adjusted and returned to the caller.
 
-FIXME: This gets called when we call idPlayer::CalcDamagePoints from idAI::AttackMelee, which then checks for a saving throw,
+This gets called when we call idPlayer::CalcDamagePoints from idAI::AttackMelee, which then checks for a saving throw,
 possibly forcing a miss.  This is harmless behavior ATM, but is not intuitive.
 ================
 */
@@ -4414,7 +4414,7 @@ bool idAI::TestMelee( void ) const {
 		return false;
 	}
 
-	//FIXME: make work with gravity vector
+	//make work with gravity vector
 	idVec3 org = physicsObj.GetOrigin();
 	const idBounds &myBounds = physicsObj.GetBounds();
 	idBounds bounds;
